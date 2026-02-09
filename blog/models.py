@@ -7,7 +7,7 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nombre
     
-    class meta:
+    class Meta:
         db_table= 'categorias'
         verbose_name = 'Categoria'
         verbose_name_plural = 'Categorias'
@@ -25,7 +25,7 @@ class Entrada(models.Model):
     def __str__(self):
         return self.titulo
     
-    class meta:
+    class Meta:
         db_table = 'entradas'
         verbose_name='Entada'
         verbose_name_plural='Entradas'

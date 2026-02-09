@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "blog",
+    "crispy_forms",
+    'crispy_bootstrap5'
 ]
 
 MIDDLEWARE = [
@@ -56,11 +58,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "proyecto3.urls"
-
+import os
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -111,3 +113,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+STATICFILES_DIR = {
+    os.path.join(BASE_DIR,"static")
+}
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
