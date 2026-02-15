@@ -10,23 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 # Importamos MYSQL
-import os
+from .db import MYSQL
 #Indicamos la bd que esta en mysql
-import os
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('MYSQL_ADDON_DB'),
-        'USER': os.environ.get('MYSQL_ADDON_USER'),
-        'PASSWORD': os.environ.get('MYSQL_ADDON_PASSWORD'),
-        'HOST': os.environ.get('MYSQL_ADDON_HOST'),
-        'PORT': os.environ.get('MYSQL_ADDON_PORT'),
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
-    }
-}
+DATABASES= MYSQL
 
 
 from pathlib import Path
@@ -44,11 +30,7 @@ SECRET_KEY = "django-insecure-57e&6s!==(wjipwamj7f_)3$f4=o%e#m5+w&0(x2@2)03fzz&@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = [*]
-=======
-ALLOWED_HOSTS = ["*"]
->>>>>>> 210d1a66be4dd9d35bb0aaa7db48815760daa83f
 
 
 # Application definition
@@ -73,7 +55,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    
 ]
 
 ROOT_URLCONF = "proyecto3.urls"

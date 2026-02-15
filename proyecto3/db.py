@@ -1,12 +1,16 @@
-#import os
+import os
 
-#MYSQL = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': os.environ.get('MYSQLDATABASE'),
-#        'USER': os.environ.get('MYSQLUSER'),
-#        'PASSWORD': os.environ.get('MYSQLPASSWORD'),
-#        'HOST': os.environ.get('MYSQLHOST'),
-#        'PORT': os.environ.get('MYSQLPORT'),
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('MYSQL_ADDON_DB'),
+        'USER': os.environ.get('MYSQL_ADDON_USER'),
+        'PASSWORD': os.environ.get('MYSQL_ADDON_PASSWORD'),
+        'HOST': os.environ.get('MYSQL_ADDON_HOST'),
+        'PORT': os.environ.get('MYSQL_ADDON_PORT'),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+    }
+}
+
