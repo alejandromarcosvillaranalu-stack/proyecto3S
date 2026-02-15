@@ -1,6 +1,6 @@
 import os
 
-DATABASES = {
+MYSQL = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.environ.get('MYSQL_ADDON_DB'),
@@ -13,4 +13,3 @@ DATABASES = {
         }
     }
 }
-
