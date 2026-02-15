@@ -44,7 +44,11 @@ SECRET_KEY = "django-insecure-57e&6s!==(wjipwamj7f_)3$f4=o%e#m5+w&0(x2@2)03fzz&@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = [*]
+=======
+ALLOWED_HOSTS = ["*"]
+>>>>>>> 210d1a66be4dd9d35bb0aaa7db48815760daa83f
 
 
 # Application definition
@@ -69,6 +73,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    
 ]
 
 ROOT_URLCONF = "proyecto3.urls"
